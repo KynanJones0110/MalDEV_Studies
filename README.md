@@ -3,7 +3,7 @@ Mal dev studies
 
 As followed by TryHackMe's Signature Evasion.
 
-C obfuscated reverse shell utilising dynamic libary loading to avoid IAT / easy static analysis.
+A basic C Obfuscated reverse shell utilising dynamic libary loading to avoid IAT / easy static analysis.
 
 
 Disclaimer: Non-Reliability Notice
