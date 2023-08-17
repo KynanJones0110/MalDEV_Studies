@@ -9,7 +9,7 @@ As followed by TryHackMe's Signature Evasion and other blobs on the web.
 
 Disclaimer: Non-Reliability Notice
 
-This repository contains an educational reverse shell written in C. Please note that the code provided here is intended for educational purposes only. It is essential to understand that the usage of such tools can have legal and ethical implications. 
+This repository contains an educational potentially malicious samples written in C. Please note that the code provided here is intended for educational purposes only. It is essential to understand that the usage of such tools can have legal and ethical implications. You should also be aware all samples will be easily flagged by the majority of vendors, and if not, will have slight modifications to prevent simple copy and run usage
 
 By accessing and utilizing the code from this repository, you acknowledge and agree that:
 
