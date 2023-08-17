@@ -1,10 +1,13 @@
 # MalDEV_Studies
 Mal dev studies
 
-As followed by TryHackMe's Signature Evasion.
+As followed by TryHackMe's Signature Evasion and other blobs on the web.
 
+
+#1
 A basic C Obfuscated reverse shell utilising dynamic libary loading to avoid IAT / easy static analysis.
-
+#2
+Simple process injector for testing DLL injection (instant EPP flag)
 
 Disclaimer: Non-Reliability Notice
 
