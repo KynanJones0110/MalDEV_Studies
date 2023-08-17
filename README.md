@@ -1,7 +1,7 @@
 # MalDEV_Studies
 Mal dev studies
 
-As followed by TryHackMe's Signature Evasion and other blobs on the web.
+As followed by TryHackMe's Signature Evasion and Other Blobs on the web.
 
 
 - 1 A basic C Obfuscated reverse shell utilising dynamic libary loading to avoid IAT / easy static analysis.
