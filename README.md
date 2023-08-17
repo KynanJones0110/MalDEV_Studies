@@ -4,12 +4,12 @@ Mal dev studies
 As followed by TryHackMe's Signature Evasion and Other Blobs on the web.
 
 
-- 1 A basic C Obfuscated reverse shell utilising dynamic libary loading to avoid IAT / easy static analysis.
-- 2 Simple process injector for testing DLL injection (instant EPP flag)
+- **A basic C Obfuscated reverse shell utilising dynamic libary loading to avoid IAT / easy static analysis.**
+-  **Simple process injector for testing DLL injection (instant EPP flag)**
 
 Disclaimer: Non-Reliability Notice
 
-This repository contains an educational potentially malicious samples written in C. Please note that the code provided here is intended for educational purposes only. It is essential to understand that the usage of such tools can have legal and ethical implications. You should also be aware all samples will be easily flagged by the majority of vendors, and if not, will have slight modifications to prevent simple copy and run usage
+This repository contains an educational potentially malicious samples written in C. Please note that the code provided here is intended for educational purposes only. It is essential to understand that the usage of such tools can have legal and ethical implications. **You should also be aware all samples will be easily flagged by the majority of vendors, and if not, will have slight modifications to prevent simple copy and run usage.**
 
 By accessing and utilizing the code from this repository, you acknowledge and agree that:
 
